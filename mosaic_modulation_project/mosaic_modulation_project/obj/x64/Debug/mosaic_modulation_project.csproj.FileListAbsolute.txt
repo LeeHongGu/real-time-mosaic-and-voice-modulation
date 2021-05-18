@@ -42,3 +42,4 @@ C:\Users\LeeHonggu\Documents\GitHub\real-time-mosaic-and-voice-modulation\mosaic
 C:\Users\LeeHonggu\Documents\GitHub\real-time-mosaic-and-voice-modulation\mosaic_modulation_project\mosaic_modulation_project\obj\x64\Debug\mosaic_modulation_project.csproj.CopyComplete
 C:\Users\LeeHonggu\Documents\GitHub\real-time-mosaic-and-voice-modulation\mosaic_modulation_project\mosaic_modulation_project\obj\x64\Debug\mosaic_modulation_project.exe
 C:\Users\LeeHonggu\Documents\GitHub\real-time-mosaic-and-voice-modulation\mosaic_modulation_project\mosaic_modulation_project\obj\x64\Debug\mosaic_modulation_project.pdb
+C:\Users\LeeHonggu\Documents\GitHub\real-time-mosaic-and-voice-modulation\mosaic_modulation_project\mosaic_modulation_project\obj\x64\Debug\mosaic_modulation_project.csprojAssemblyReference.cache
