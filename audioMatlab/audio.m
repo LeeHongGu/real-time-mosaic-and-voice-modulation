@@ -20,9 +20,6 @@ function obj = audio(SampleRate,NumChannels,ID)
             myProcessedSignal = process(mySignal);
             deviceWriter(myProcessedSignal);
         end
-%         mySignal = fileReader();
-%         myProcessedSignal = process(mySignal);
-%         deviceWriter(myProcessedSignal);
     end
 %     while ~isDone(fileReader)
 %         mySignal = fileReader();
