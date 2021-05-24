@@ -36,10 +36,12 @@ C:\Users\LeeHonggu\Documents\GitHub\real-time-mosaic-and-voice-modulation\mosaic
 C:\Users\LeeHonggu\Documents\GitHub\real-time-mosaic-and-voice-modulation\mosaic_modulation_project\mosaic_modulation_project\bin\x64\Debug\System.Numerics.Vectors.xml
 C:\Users\LeeHonggu\Documents\GitHub\real-time-mosaic-and-voice-modulation\mosaic_modulation_project\mosaic_modulation_project\bin\x64\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\LeeHonggu\Documents\GitHub\real-time-mosaic-and-voice-modulation\mosaic_modulation_project\mosaic_modulation_project\bin\x64\Debug\System.ValueTuple.xml
+C:\Users\LeeHonggu\Documents\GitHub\real-time-mosaic-and-voice-modulation\mosaic_modulation_project\mosaic_modulation_project\obj\x64\Debug\mosaic_modulation_project.csprojAssemblyReference.cache
 C:\Users\LeeHonggu\Documents\GitHub\real-time-mosaic-and-voice-modulation\mosaic_modulation_project\mosaic_modulation_project\obj\x64\Debug\mosaic_modulation_project.Properties.Resources.resources
 C:\Users\LeeHonggu\Documents\GitHub\real-time-mosaic-and-voice-modulation\mosaic_modulation_project\mosaic_modulation_project\obj\x64\Debug\mosaic_modulation_project.csproj.GenerateResource.cache
 C:\Users\LeeHonggu\Documents\GitHub\real-time-mosaic-and-voice-modulation\mosaic_modulation_project\mosaic_modulation_project\obj\x64\Debug\mosaic_modulation_project.csproj.CoreCompileInputs.cache
 C:\Users\LeeHonggu\Documents\GitHub\real-time-mosaic-and-voice-modulation\mosaic_modulation_project\mosaic_modulation_project\obj\x64\Debug\mosaic_modulation_project.csproj.CopyComplete
 C:\Users\LeeHonggu\Documents\GitHub\real-time-mosaic-and-voice-modulation\mosaic_modulation_project\mosaic_modulation_project\obj\x64\Debug\mosaic_modulation_project.exe
 C:\Users\LeeHonggu\Documents\GitHub\real-time-mosaic-and-voice-modulation\mosaic_modulation_project\mosaic_modulation_project\obj\x64\Debug\mosaic_modulation_project.pdb
-C:\Users\LeeHonggu\Documents\GitHub\real-time-mosaic-and-voice-modulation\mosaic_modulation_project\mosaic_modulation_project\obj\x64\Debug\mosaic_modulation_project.csprojAssemblyReference.cache
+C:\Users\LeeHonggu\Documents\GitHub\real-time-mosaic-and-voice-modulation\mosaic_modulation_project\mosaic_modulation_project\obj\x64\Debug\mosaic_modulation_project.Form1.resources
+C:\Users\LeeHonggu\Documents\GitHub\real-time-mosaic-and-voice-modulation\mosaic_modulation_project\mosaic_modulation_project\bin\x64\Debug\haarcascade_frontalface_alt.xml

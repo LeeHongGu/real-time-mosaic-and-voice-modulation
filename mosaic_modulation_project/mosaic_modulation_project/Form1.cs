@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using OpenCvSharp;
 
-namespace OpenCV_test1
+namespace mosaic_modulation_project
 {
     public partial class Form1 : Form
     {
@@ -64,7 +64,7 @@ namespace OpenCV_test1
                 Mat mosaic_frame = new Mat(frame, new Rect(item.X, item.Y, item.Width, item.Height));
                 Mat temp_frame = new Mat();
 
-                Cv2.Resize(mosaic_frame, temp_frame, new OpenCvSharp.Size(item.Width / 10, item.Height / 10));
+                Cv2.Resize(mosaic_frame, temp_frame, new OpenCvSharp.Size(item.Width / 15, item.Height / 15));
                 Cv2.Resize(temp_frame, mosaic_frame, new OpenCvSharp.Size(item.Width, item.Height));
 
                 //Cv2.Rectangle(frame, item, Scalar.Red, 0); // add rectangle to the image
