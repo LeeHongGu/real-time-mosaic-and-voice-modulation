@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using OpenCvSharp;
+using AudioPitchShiftNative;
+
 
 namespace mosaic_modulation_project
 {
@@ -15,8 +17,17 @@ namespace mosaic_modulation_project
     {
         VideoCapture video;
         Mat frame = new Mat();
-        //int rate = 15;
-        //int x, y, w, h = 0;
+        voice_mod vm = new voice_mod();
+
+        //int shift_val = 7; //음성변조 계수
+        //int rate = 15; //모자이크 계수
+
+        //com 서버 생성
+        //public static Type mlType;
+        //public static Object matlab;
+
+        String filenameFaceCascade = "haarcascade_frontalface_alt.xml";
+        CascadeClassifier faceCascade = new CascadeClassifier();
 
         public Form1()
         {
@@ -25,6 +36,9 @@ namespace mosaic_modulation_project
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            //mlType = Type.GetTypeFromProgID("Matlab.Application");
+            //matlab = Activator.CreateInstance(mlType);
+
             try
             {
                 video = new VideoCapture(0);
@@ -41,8 +55,7 @@ namespace mosaic_modulation_project
         {
             int sleepTime = (int)Math.Round(1000 / video.Fps);
 
-            String filenameFaceCascade = "haarcascade_frontalface_alt.xml";
-            CascadeClassifier faceCascade = new CascadeClassifier();
+            vm.realtime();
 
             if (!faceCascade.Load(filenameFaceCascade))
             {
@@ -64,6 +77,7 @@ namespace mosaic_modulation_project
                 Mat mosaic_frame = new Mat(frame, new Rect(item.X, item.Y, item.Width, item.Height));
                 Mat temp_frame = new Mat();
 
+                //Cv2.Resize(mosaic_frame, temp_frame, new OpenCvSharp.Size(item.Width / ((item.X+10)/10), item.Height / ((item.Y+10)/10)));
                 Cv2.Resize(mosaic_frame, temp_frame, new OpenCvSharp.Size(item.Width / 15, item.Height / 15));
                 Cv2.Resize(temp_frame, mosaic_frame, new OpenCvSharp.Size(item.Width, item.Height));
 
@@ -77,22 +91,20 @@ namespace mosaic_modulation_project
             // display
             pictureBoxIpl1.ImageIpl = frame;
 
+            
+
             Cv2.WaitKey(sleepTime);
             video.Release();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            String filenameFaceCascade = "haarcascade_frontalface_alt.xml";
-            CascadeClassifier faceCascade = new CascadeClassifier();
 
-            if (!faceCascade.Load(filenameFaceCascade))
-            {
-                Console.WriteLine("error");
-                return;
-            }
+        }
 
-            //faceCascade.DetectMultiScale
+        private void button2_Click(object sender, EventArgs e)
+        {
+            vm.modulation();
         }
     }
 }

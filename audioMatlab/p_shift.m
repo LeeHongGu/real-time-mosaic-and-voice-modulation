@@ -1,4 +1,5 @@
-[audioIn,fs] = audioread('audiorec_001.flac');
+%[audioIn,fs] = audioread('audiorec_001.flac');
+[audioIn,fs] = audioDeviceReader;
 win = kbdwin(512);
 overlapLength = 0.75*numel(win);
 
@@ -7,7 +8,7 @@ S = stft(audioIn, ...
     "OverlapLength",overlapLength, ...
     "Centered",false);
 
-nsemitones = 3;
+nsemitones = 0;
 lockPhase = false;
 audioOut = shiftPitch(S,nsemitones, ...
                      "Window",win, ...
