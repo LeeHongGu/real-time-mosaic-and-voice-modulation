@@ -18,6 +18,7 @@ namespace mosaic_modulation_project
         VideoCapture video;
         Mat frame = new Mat();
         voice_mod vm = new voice_mod();
+        int rm = 0;
 
         //int shift_val = 7; //음성변조 계수
         //int rate = 15; //모자이크 계수
@@ -55,7 +56,7 @@ namespace mosaic_modulation_project
         {
             int sleepTime = (int)Math.Round(1000 / video.Fps);
 
-            vm.realtime();
+            vm.realtime_mod(rm);
 
             if (!faceCascade.Load(filenameFaceCascade))
             {
@@ -104,7 +105,7 @@ namespace mosaic_modulation_project
 
         private void button2_Click(object sender, EventArgs e)
         {
-            vm.modulation();
+            rm = 1;
         }
     }
 }

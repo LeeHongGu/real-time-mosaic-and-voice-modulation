@@ -1,4 +1,5 @@
-function pitchshift(shift_val)
+function [x] = AudioPitchShift(shift_val)
+    x = shift_val;
     
     % Create test bench input and output
     deviceReader = audioDeviceReader;
@@ -7,7 +8,7 @@ function pitchshift(shift_val)
     % Set up the system under test
     sut = audiopluginexample.PitchShifter;
     setSampleRate(sut,deviceReader.SampleRate);
-    sut.PitchShift = shift_val;
+    sut.PitchShift = x;
 
     % Open parameterTuner for interactive tuning during simulation
 %     tuner = parameterTuner(sut);
