@@ -1,5 +1,4 @@
-function [x] = AudioPitchShift(shift_val)
-    x = shift_val;
+function AudioPitchShift(shift_val)
     
     % Create test bench input and output
     deviceReader = audioDeviceReader;
@@ -8,7 +7,7 @@ function [x] = AudioPitchShift(shift_val)
     % Set up the system under test
     sut = audiopluginexample.PitchShifter;
     setSampleRate(sut,deviceReader.SampleRate);
-    sut.PitchShift = x;
+    sut.PitchShift = shift_val;
 
     % Open parameterTuner for interactive tuning during simulation
 %     tuner = parameterTuner(sut);
@@ -18,7 +17,7 @@ function [x] = AudioPitchShift(shift_val)
 %    while 1
     nOverruns = 0;
     nUnderruns = 0;
-    maxIterations = 10000;
+    maxIterations = 100;
     for iter = 1:maxIterations
         % Read from input, process, and write to output
         [in,novr] = deviceReader();

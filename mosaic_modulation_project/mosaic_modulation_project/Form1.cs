@@ -15,10 +15,11 @@ namespace mosaic_modulation_project
 {
     public partial class Form1 : Form
     {
+        Form3 form3;
         VideoCapture video;
         Mat frame = new Mat();
-        voice_mod vm = new voice_mod();
-        int rm = 0;
+        Mat dst;
+        public int rt_mod = 0;
 
         //int shift_val = 7; //음성변조 계수
         //int rate = 15; //모자이크 계수
@@ -30,15 +31,24 @@ namespace mosaic_modulation_project
         String filenameFaceCascade = "haarcascade_frontalface_alt.xml";
         CascadeClassifier faceCascade = new CascadeClassifier();
 
-        public Form1()
+        public Form1(Form3 f3)
         {
             InitializeComponent();
+            form3 = f3;
+        }
+
+        public Form1()
+        {
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            //com 서버 생성
             //mlType = Type.GetTypeFromProgID("Matlab.Application");
             //matlab = Activator.CreateInstance(mlType);
+
+            dst = new Mat(frame.Size(), MatType.CV_8UC3);
 
             try
             {
@@ -54,9 +64,7 @@ namespace mosaic_modulation_project
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            int sleepTime = (int)Math.Round(1000 / video.Fps);
-
-            vm.realtime_mod(rm);
+            //int sleepTime = (int)Math.Round(1000 / video.Fps);
 
             if (!faceCascade.Load(filenameFaceCascade))
             {
@@ -65,6 +73,8 @@ namespace mosaic_modulation_project
             }
 
             video.Read(frame);
+
+            Cv2.Flip(frame, dst, FlipMode.Y);
 
             // detect
             Rect[] faces = faceCascade.DetectMultiScale(frame);
@@ -88,24 +98,37 @@ namespace mosaic_modulation_project
             }
 
 
-
             // display
             pictureBoxIpl1.ImageIpl = frame;
 
-            
-
-            Cv2.WaitKey(sleepTime);
-            video.Release();
+            //Cv2.WaitKey(sleepTime);
+            //video.Release();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            Console.WriteLine("button1 clicked");
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            rm = 1;
+            Console.WriteLine("button2 clicked");
+            rt_mod = 1;
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            rt_mod = 10;
+            form3.Close();
+            frame.Dispose();
+            video.Release();
+            Cv2.DestroyAllWindows();
+            Application.Exit();
+        }
+
+        public int getRT_Mod()
+        {
+            return rt_mod;
         }
     }
 }

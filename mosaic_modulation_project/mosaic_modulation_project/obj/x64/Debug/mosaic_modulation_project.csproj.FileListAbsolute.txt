@@ -51,3 +51,5 @@ C:\Users\LeeHonggu\Documents\GitHub\real-time-mosaic-and-voice-modulation\mosaic
 C:\Users\LeeHonggu\Documents\GitHub\real-time-mosaic-and-voice-modulation\mosaic_modulation_project\mosaic_modulation_project\bin\x64\Debug\MWArray.xml
 C:\Users\LeeHonggu\Documents\GitHub\real-time-mosaic-and-voice-modulation\mosaic_modulation_project\mosaic_modulation_project\obj\x64\Debug\Interop.MLApp.dll
 C:\Users\LeeHonggu\Documents\GitHub\real-time-mosaic-and-voice-modulation\mosaic_modulation_project\mosaic_modulation_project\obj\x64\Debug\mosaic_modulation_project.csproj.ResolveComReference.cache
+C:\Users\LeeHonggu\Documents\GitHub\real-time-mosaic-and-voice-modulation\mosaic_modulation_project\mosaic_modulation_project\obj\x64\Debug\mosaic_modulation_project.Form2.resources
+C:\Users\LeeHonggu\Documents\GitHub\real-time-mosaic-and-voice-modulation\mosaic_modulation_project\mosaic_modulation_project\obj\x64\Debug\mosaic_modulation_project.Form3.resources
