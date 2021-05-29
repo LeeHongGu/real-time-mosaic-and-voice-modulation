@@ -7,9 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 using OpenCvSharp;
 using AudioPitchShiftNative;
-using PitchShifter;
 
 
 namespace mosaic_modulation_project
@@ -21,7 +21,6 @@ namespace mosaic_modulation_project
         Mat frame = new Mat();
         Mat dst;
         public int rt_mod = 0;
-        MainForm pitchshift_form;
 
         //int shift_val = 7; //음성변조 계수
         //int rate = 15; //모자이크 계수
@@ -116,8 +115,6 @@ namespace mosaic_modulation_project
         {
             Console.WriteLine("button2 clicked");
             rt_mod = 1;
-            pitchshift_form = new MainForm();
-            pitchshift_form.Show();
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
