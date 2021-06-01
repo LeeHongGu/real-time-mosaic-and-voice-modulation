@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 using OpenCvSharp;
 using AudioPitchShiftNative;
+using OpenCvSharp.Face;
 
 
 namespace mosaic_modulation_project
@@ -74,7 +75,7 @@ namespace mosaic_modulation_project
             }
 
             video.Read(frame);
-
+            
             Cv2.Flip(frame, dst, FlipMode.Y);
 
             // detect
@@ -92,7 +93,7 @@ namespace mosaic_modulation_project
                 //Cv2.Resize(mosaic_frame, temp_frame, new OpenCvSharp.Size(item.Width / ((item.X+10)/10), item.Height / ((item.Y+10)/10)));
                 Cv2.Resize(mosaic_frame, temp_frame, new OpenCvSharp.Size(item.Width / 15, item.Height / 15));
                 Cv2.Resize(temp_frame, mosaic_frame, new OpenCvSharp.Size(item.Width, item.Height));
-
+                //EigenFaceRecognizer
                 //Cv2.Rectangle(frame, item, Scalar.Red, 0); // add rectangle to the image
 
                 Console.WriteLine("faces : " + item);
